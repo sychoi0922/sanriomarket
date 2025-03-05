@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>study</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+ 
+  <!-- 타이머 필터
+  <filter>
+  	<filter-name>timerFilter</filter-name>
+  	<filter-class>com.filter.TimerFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>timerFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>  -->
+  
+  
+  <!-- Encoding Filter
+  <filter>
+  	<filter-name>encodingFilter</filter-name>
+  	<filter-class>com.filter.EncodingFilter</filter-class>
+  	<init-param>
+  		<param-name>charset</param-name>
+  		<param-value>utf-8</param-value>
+  	</init-param>
+  </filter>
+  <filter-mapping>
+  	<filter-name>encodingFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping> 
+   -->
+   
+   
+  <!-- login Filter
+  <filter>
+  	<filter-name>loginFilter</filter-name>
+  	<filter-class>com.filter.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>loginFilter</filter-name>
+  	<url-pattern>/bbs/*</url-pattern>
+  </filter-mapping> -->
+  
+  <!-- listener
+  <listener>
+  	<listener-class>com.event.CountManager</listener-class>
+  </listener>
+  
+  <listener>
+  	<listener-class>com.event.ContextListenerTest</listener-class>
+  </listener> -->
+  
+  
+  
+  <!-- basket 서블릿 -->
+  <servlet>
+  	<servlet-name>basketServlet</servlet-name>
+  	<servlet-class>com.project.basket.BasketServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>basketServlet</servlet-name>
+  	<url-pattern>/basket/*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- purchased 서블릿 -->
+  <servlet>
+  	<servlet-name>purchasedServlet</servlet-name>
+  	<servlet-class>com.project.purchased.PurchasedServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>purchasedServlet</servlet-name>
+  	<url-pattern>/purchased/*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- cancel 서블릿 -->
+  <servlet>
+  	<servlet-name>cancelServlet</servlet-name>
+  	<servlet-class>com.project.cancel.CancelServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>cancelServlet</servlet-name>
+  	<url-pattern>/cancel/*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- image 서블릿 -->
+  <servlet>
+  	<servlet-name>imgServlet</servlet-name>
+  	<servlet-class>com.project.image.ImageServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>imgServlet</servlet-name>
+  	<url-pattern>/img/*</url-pattern>
+  </servlet-mapping>
+  
+  <!--  pinformation 서블릿 -->
+  
+  <servlet>
+	<servlet-name>pinfoServlet</servlet-name>
+  	<servlet-class>com.project.pInformation.PinformationServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>pinfoServlet</servlet-name>
+  	<url-pattern>/pinfo/*</url-pattern>
+  </servlet-mapping>
+  
+   <!-- membership 서블릿 -->
+  <servlet>
+  	<servlet-name>membershipServlet</servlet-name>
+  	<servlet-class>com.project.membership.MembershipServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>membershipServlet</servlet-name>
+  	<url-pattern>/pj/*</url-pattern>
+  </servlet-mapping>
+  
+  <!--  notice  -->
+  <servlet>
+    <servlet-name>noticeServlet</servlet-name>
+    <servlet-class>com.project.notice.NoticeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>noticeServlet</servlet-name>
+    <url-pattern>/not/*</url-pattern>
+  </servlet-mapping>
+  
+  <!--  FAQ  -->
+  <servlet>
+    <servlet-name>faqServlet</servlet-name>
+    <servlet-class>com.project.faq.FaqServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>faqServlet</servlet-name>
+    <url-pattern>/question/*</url-pattern>
+  </servlet-mapping>
+  
+    <!--  review  -->
+  <servlet>
+    <servlet-name>reviewServlet</servlet-name>
+    <servlet-class>com.project.review.ReviewServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>reviewServlet</servlet-name>
+    <url-pattern>/rev/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>mainServlet</servlet-name>
+    <servlet-class>com.project.main.MainServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>mainServlet</servlet-name>
+    <url-pattern>/view/*</url-pattern>
+  </servlet-mapping>
+
+  
+  
+</web-app>
