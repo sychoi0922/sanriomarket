@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class FileManager {
 	
-	//ÆÄÀÏ ´Ù¿î·Îµå
+	//íŒŒì¼ ë‹¤ìš´ë¡œë“œ
 	
 	public static boolean doFileDownload(HttpServletResponse response, 
 			String saveFileName, String originalFileName, String path) {
@@ -24,10 +24,10 @@ public class FileManager {
 			}
 			
 			
-			//ÇÑ±Û¸íÀÇ ÆÄÀÏÀ» ´Ù¿î¹Ş¾Æ¼­ Å¬¶óÀÌ¾ğÆ® ÄÄ¿¡ ÆÄÀÏ ÀÌ¸§À» »ı¼º½Ã
-			//ÇÑ±Û ±úÁü Çö»óÀÌ ¹ß»ıÇÑ´Ù. ÀÌ¸¦ ¹æÁöÇÑ´Ù.
+			//í•œê¸€ëª…ì˜ íŒŒì¼ì„ ë‹¤ìš´ë°›ì•„ì„œ í´ë¼ì´ì–¸íŠ¸ ì»´ì— íŒŒì¼ ì´ë¦„ì„ ìƒì„±ì‹œ
+			//í•œê¸€ ê¹¨ì§ í˜„ìƒì´ ë°œìƒí•œë‹¤. ì´ë¥¼ ë°©ì§€í•œë‹¤.
 			originalFileName = new String(
-					originalFileName.getBytes("euc-kr"),"ISO-8859-1");	//8859_1·Îµµ »ç¿ë °¡´É
+					originalFileName.getBytes("euc-kr"),"ISO-8859-1");	//8859_1ë¡œë„ ì‚¬ìš© ê°€ëŠ¥
 			
 			File f = new File(filePath);
 			
@@ -67,7 +67,7 @@ public class FileManager {
 	
 	
 	
-	//ÆÄÀÏ »èÁ¦
+	//íŒŒì¼ ì‚­ì œ
 	
 	public static void doFileDelete(String fileName, String path) {
 		
@@ -78,7 +78,7 @@ public class FileManager {
 			File f = new File(filePath);
 			
 			if(f.exists()) {
-				f.delete();		//¹°¸®Àû ÆÄÀÏ »èÁ¦
+				f.delete();		//ë¬¼ë¦¬ì  íŒŒì¼ ì‚­ì œ
 			}
 			
 		} catch (Exception e) {
